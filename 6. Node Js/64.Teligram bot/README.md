@@ -1,2 +1,2 @@
 Try here the Simple Bot 
-[Teligram](https://web.telegram.org/k/#@srijit_algo_bot)
+[Teligram](t.me/srijit_algo_bot)

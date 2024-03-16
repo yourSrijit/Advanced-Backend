@@ -1,5 +1,6 @@
 const { Telegraf } = require('telegraf')
-const bot = new Telegraf(BOT_TOKEN);
+require("dotenv").config();
+const bot = new Telegraf(process.env.BOT_TOKEN);
 const binarySearch=`
 public static void binarySearch(int arr[], int first, int last, int key){  
     int mid = (first + last)/2;  

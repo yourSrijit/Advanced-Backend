@@ -98,4 +98,22 @@ db.products.find({ price: { $gt: 1250 }})'.limit(3).sort({ 'price': 1 });
 { $and: [ { condition1 }, { condition2 }, ... ] }
 { field: { $not: { operator: value } } }
 
+```   
+### Complex Expressions
+The $expr operator allows using aggregation expressions within a
+query.
+Useful when you need to compare fields from the same document in a
+more complex manner.
+Syntax
+` { $expr: { operator: [field, value] } } `
+
+`
+db.products.find({ $expr:{$gt:['$price',1340]}})
+dont use : between field and the value
+`
+### Find sales where (quantity * price ) is greater than targetOPrice
 ```
+ db.sales.find({ $expr:{$gt:[{$multiply:['$quantity','$price']},'$targetPrice']}})
+ ```
+
+### Elements Operator

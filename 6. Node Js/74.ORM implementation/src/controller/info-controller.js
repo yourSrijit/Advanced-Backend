@@ -1,5 +1,5 @@
 const info=(req,res)=>{
-    return res.json({
+    return res.status(500).json({
         success:true,
         message:"API IS LIVE NOW",
         error:{},

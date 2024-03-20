@@ -1,5 +1,8 @@
 # MVC Architechture [Model View Controller]
 
+![mvc_express](https://github.com/yourSrijit/Advanced-Backend/assets/91645620/b38cd7f1-f48b-4c5e-8658-938322cbd608)
+
+
 start 
 ```
 npm run dev

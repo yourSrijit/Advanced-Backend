@@ -3,7 +3,7 @@
 ```
 npm install  sequelize
 npm i mysql2
-nnpm install sequelize-cli
+npm install sequelize-cli
 
 ```
 - Inside src folder

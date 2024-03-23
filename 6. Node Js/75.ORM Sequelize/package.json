@@ -1,6 +1,19 @@
 {
+  "name": "75.orm-sequelize",
+  "version": "1.0.0",
+  "description": "1.\r ```\r npm install  sequelize\r npm i mysql2\r nnpm install sequelize-cli",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon src/App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "express": "^4.19.1",
     "mysql2": "^3.9.2",
+    "nodemon": "^3.1.0",
     "sequelize": "^6.37.1",
     "sequelize-cli": "^6.6.2"
   }

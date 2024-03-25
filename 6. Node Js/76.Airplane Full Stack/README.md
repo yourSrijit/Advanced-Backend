@@ -161,7 +161,26 @@ class CrudRepo{
     }
 }
 ```
-6.Create Services for the Airrplane Repo
+6.Create Services for the Airplane Repo
+
+```
+const {AirplaneRepo} =require("../repositories");
+const airplaneRepo=new AirplaneRepo();
+
+async function createAirplane(data){
+    try{
+        const airplane=await airplaneRepo.create(data);
+        return airplane;
+    }
+    catch(err){
+        throw err;
+    }
+}
+
+module.exports={
+    createAirplane
+}
+```
 
 
 
@@ -170,7 +189,7 @@ class CrudRepo{
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
-``
+```
 
 
 
@@ -180,6 +199,24 @@ app.use(express.urlencoded({extended:true}))
 
 
 
+
+## Middleware
+```
+function validateCreateRequest(req,res,next){
+    if(!req.body.modelNumber){
+        return res.status(411).json({
+            success:false, 
+            message:"Something went wrong while creating airplane",
+            data:{},
+            error:{explanation:"Model number not found in the incoming "}
+        })
+    }
+
+    next();
+}
+
+module.exports={ validateCreateRequest }
+```
 
 
 

@@ -10,7 +10,7 @@ class CrudRepo{
             return response;
         }
         catch(err){
-            console.log('Something went wtong');
+            console.log('Something went wrong repo');
             throw err;
         }
         
@@ -25,30 +25,30 @@ class CrudRepo{
             return response;
         }
         catch(err){
-            console.log('Something went wtong');
+            console.log('Something went wrong');
             throw err;
         }
         
     }
     async get(data){
         try{
-            let response=await this.model.findByPK(data);
+            let response=await this.model.findByPk(data);
             return response;
         }
         catch(err){
-            console.log('Something went wtong');
+            console.log('Something went wrong');
             throw err;
         }
         
     }
 
-    async getAll(data){
+    async getAll(){
         try{
-            let response=await this.model.findAll(data);
+            let response=await this.model.findAll();
             return response;
         }
         catch(err){
-            console.log('Something went wtong');
+            console.log('Something went wrong');
             throw err;
         }
         
@@ -63,7 +63,7 @@ class CrudRepo{
             return response;
         }
         catch(err){
-            console.log('Something went wtong');
+            console.log('Something went wrong');
             throw err;
         }
         

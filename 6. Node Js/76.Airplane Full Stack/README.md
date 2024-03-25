@@ -161,9 +161,16 @@ class CrudRepo{
     }
 }
 ```
-6.Cret
+6.Create Services for the Airrplane Repo
 
 
+
+### Add this Middleware for the upcoming post request
+```
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
+
+``
 
 
 
